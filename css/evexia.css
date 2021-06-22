@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 
 :root{
-  --updown: 2.75rem;
   --green: #adc6b4;
   --rose: #c67b7b;
 }
@@ -22,7 +21,7 @@ body {
   a:focus,
   a:active,
   a.active {
-    color: #18BC9C;
+    color: var(--rose);
     outline: none;
   }
   h1,
@@ -96,81 +95,77 @@ body {
       font-size: 1.75em;
     }
   }
-  .navbar-custom {
-    background: white;
-    font-family: "EB Garamond", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: capitalize;
-    font-weight: 400;
-    border: none;
+#mainNav {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-weight: 400;
+  font-family: 'EB Garamond';
+}
+
+#mainNav .navbar-brand {
+  color: var(--rose);
+}
+
+#mainNav .navbar-nav {
+  margin-top: 1rem;
+  letter-spacing: 0.0625rem;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link {
+  color: var(--rose);
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color: var(--rose);
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+  color: var(--rose);
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+  color: var(--brand1);
+}
+
+#mainNav .navbar-toggler {
+  font-size: 80%;
+  padding: 0.8rem;
+}
+
+#mainNav .navbar-toggler:hover {
+  background: white;
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
   }
-  .navbar-custom a:focus {
-    outline: none;
+  #mainNav .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: font-size 0.3s;
+    transition: font-size 0.3s;
   }
-  .navbar-custom .navbar-brand {
-    color: var(--rose);
+  #mainNav .navbar-nav {
+    margin-top: 0;
   }
-  .navbar-custom .navbar-brand:hover,
-  .navbar-custom .navbar-brand:focus,
-  .navbar-custom .navbar-brand:active,
-  .navbar-custom .navbar-brand.active {
-    color: var(--rose);
-  }
-  .navbar-custom .navbar-nav {
-    letter-spacing: 1px;
-  }
-  .navbar-custom .navbar-nav li a {
-    color: var(--rose);
-  }
-  .navbar-custom .navbar-nav li a:hover {
-    color: var(--rose);
-    outline: var(--rose);
-  }
-  .navbar-custom .navbar-nav li a:focus,
-  .navbar-custom .navbar-nav li a:active {
-    color: var(--rose);
-  }
-  .navbar-custom .navbar-nav li.active a {
-    color: var(--rose);
-  }
-  .navbar-custom .navbar-nav li.active a:hover,
-  .navbar-custom .navbar-nav li.active a:focus,
-  .navbar-custom .navbar-nav li.active a:active {
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: white;
-    background: var(--rose);
+    background: var(--brand1);
   }
-  .navbar-custom .navbar-toggle {
-    color: var(--rose);
-    text-transform: capitalize;
-    font-size: 10px;
-    border-color: var(--rose);
-    border-width: 2px;
-  }
-  .navbar-custom .navbar-toggle:hover,
-  .navbar-custom .navbar-toggle:focus {
-    color: var(--rose);
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: white;
-    color: var(--rose);
+    background: var(--brand1);
   }
-  @media (min-width: 768px) {
-    .navbar-custom {
-      padding: 10px 0;
-      -webkit-transition: padding 0.3s;
-      -moz-transition: padding 0.3s;
-      transition: padding 0.3s;
-    }
-    .navbar-custom .navbar-brand {
-      font-size: 2em;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
-    }
-    .navbar-custom.affix {
-      padding: 10px 0;
-    }
-    .navbar-custom.affix .navbar-brand {
-      font-size: 1.5em;
-    }
-  }
+}
+
   section {
     padding: 50px 30px;
   }
@@ -545,28 +540,7 @@ body {
   .input-validation-error {
       border: 1px solid red!important;
   }
-/*   nav.navbar-mrcms {
-      color: #d9534f;
-      background-color: white;
-      border: none;
-  }
-  
-      nav.navbar-mrcms ul li a, .navbar-brand {
-         color: #d9534f;
-      }
-  
-      nav.navbar-mrcms .nav > li > a:hover, nav.navbar-mrcms .nav > li > a:focus {
-          background-color: #c9302c;
-          color: white;
-      }
-  
-      nav.navbar-mrcms ul.dropdown-menu li a {
-          color: black;
-      }
-  
-  .mrcms-content > :first-child {
-      margin-top: 0;
-  } */
+
   .navbar-toggle {
       background: white;
   }
